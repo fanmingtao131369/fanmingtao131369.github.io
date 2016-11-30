@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>ES6 | 大民</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="ES6 特性我们先看下都有哪些
+
+Default Parameters（默认参数）
+Template Literals （模板文本）
+Multi-line Strings （多行字符串）
+Destructuring Assignment （解构赋值）
+Enhanced Object Literals （增强的对象文本）
+Arrow Functions （箭头函数）
+Promises
+Block-S">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6">
+<meta property="og:url" content="http://yoursite.com/2016/09/01/ES6新特性/index.html">
+<meta property="og:site_name" content="大民">
+<meta property="og:description" content="ES6 特性我们先看下都有哪些
+
+Default Parameters（默认参数）
+Template Literals （模板文本）
+Multi-line Strings （多行字符串）
+Destructuring Assignment （解构赋值）
+Enhanced Object Literals （增强的对象文本）
+Arrow Functions （箭头函数）
+Promises
+Block-S">
+<meta property="og:updated_time" content="2016-11-30T12:00:25.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6">
+<meta name="twitter:description" content="ES6 特性我们先看下都有哪些
+
+Default Parameters（默认参数）
+Template Literals （模板文本）
+Multi-line Strings （多行字符串）
+Destructuring Assignment （解构赋值）
+Enhanced Object Literals （增强的对象文本）
+Arrow Functions （箭头函数）
+Promises
+Block-S">
+  
+    <link rel="alternate" href="/atom.xml" title="大民" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">大民</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-ES6新特性" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/09/01/ES6新特性/" class="article-date">
+  <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">2016-09-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ES6-特性"><a href="#ES6-特性" class="headerlink" title="ES6 特性"></a>ES6 特性</h1><p>我们先看下都有哪些</p>
+<ul>
+<li>Default Parameters（默认参数）</li>
+<li>Template Literals （模板文本）</li>
+<li>Multi-line Strings （多行字符串）</li>
+<li>Destructuring Assignment （解构赋值）</li>
+<li>Enhanced Object Literals （增强的对象文本）</li>
+<li>Arrow Functions （箭头函数）</li>
+<li>Promises</li>
+<li>Block-Scoped Constructs Let and Const（块作用域构造Let and Const）</li>
+<li>Classes（类）</li>
+<li>Modules（模块）</li>
+</ul>
+<h4 id="Default-Parameters（默认参数）"><a href="#Default-Parameters（默认参数）" class="headerlink" title="Default Parameters（默认参数）"></a>Default Parameters（默认参数）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var fn = function (height) &#123;</div><div class="line">    var height = height || 50;</div><div class="line">       ...;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var fn = function (height=50) &#123;</div><div class="line">       ...;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h4 id="Template-Literals（模板对象）"><a href="#Template-Literals（模板对象）" class="headerlink" title="Template Literals（模板对象）"></a>Template Literals（模板对象）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var name = &apos;Your name is &apos; + first + &apos; &apos; + last + &apos;.&apos;;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var name = `Your name is $&#123;first&#125; $&#123;last&#125;. `;</div></pre></td></tr></table></figure>
+<h4 id="Multi-line-Strings-（多行字符串）"><a href="#Multi-line-Strings-（多行字符串）" class="headerlink" title="Multi-line Strings （多行字符串）"></a>Multi-line Strings （多行字符串）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var roadPoem = &apos;Then took the other, as just as fair,nt&apos;</div><div class="line">                + &apos;Had worn them really about the same,nt&apos;;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var roadPoem = `Then took the other, as just as fair,</div><div class="line">                Had worn them really about the same,`;</div></pre></td></tr></table></figure>
+<h4 id="Destructuring-Assignment-（解构赋值）"><a href="#Destructuring-Assignment-（解构赋值）" class="headerlink" title="Destructuring Assignment （解构赋值）"></a>Destructuring Assignment （解构赋值）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">someArray=[1,2,3];</div><div class="line">var first = someArray[0];</div><div class="line">var second = someArray[1];</div><div class="line">var third = someArray[2];</div><div class="line"></div><div class="line">var obj=&#123; foo: &quot;lorem&quot;, bar: &quot;ipsum&quot; &#125;;</div><div class="line">var foo = obj.foo;</div><div class="line">var bar = obj.bar;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">someArray=[1,2,3];</div><div class="line">var [first, second, third] = someArray;</div><div class="line">console.log(first);  // 1</div><div class="line">console.log(second); // 2</div><div class="line">console.log(third);  // 3</div><div class="line"></div><div class="line">var &#123; foo, bar &#125; = &#123; foo: &quot;lorem&quot;, bar: &quot;ipsum&quot; &#125;;</div><div class="line">console.log(foo); // &quot;lorem&quot;</div><div class="line">console.log(bar); // &quot;ipsum&quot;</div></pre></td></tr></table></figure>
+<h4 id="Enhanced-Object-Literals-（增强的对象字面量）"><a href="#Enhanced-Object-Literals-（增强的对象字面量）" class="headerlink" title="Enhanced Object Literals （增强的对象字面量）"></a>Enhanced Object Literals （增强的对象字面量）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    handler: handler,</div><div class="line">    toString: function() &#123;</div><div class="line">        return &quot;d &quot; + super.toString();</div><div class="line">    &#125;,</div><div class="line">    prop42: 42</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    handler,   //ES6特性 === handler: handler,</div><div class="line">    toString() &#123;   //ES6函数</div><div class="line">        return &quot;d &quot; + super.toString();</div><div class="line">       &#125;,</div><div class="line">    [ &apos;prop_&apos; + (() =&gt; 42)() ]: 42  </div><div class="line">    //主要是这个可以在字面量中加入变量 == prop42: 42</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="Arrow-Functions-in（箭头函数）"><a href="#Arrow-Functions-in（箭头函数）" class="headerlink" title="Arrow Functions in（箭头函数）"></a>Arrow Functions in（箭头函数）</h4><p>以前我们使用闭包，this总是预期之外地产生改变，而箭头函数的迷人之处在于，现在你的this可以按照你的预期使用了，身处箭头函数里面，this还是原来的this.</p>
+<p>有了箭头函数在ES6中， 我们就不必用that = this或 self = this 或 _this = this 或.bind(this)如下:</p>
+<p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var _this = this;</div><div class="line">$(&apos;.btn&apos;).click(function(event)&#123;</div><div class="line">     _this.sendData();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;.btn&apos;).click((event) =&gt;&#123;</div><div class="line">      this.sendData();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<h4 id="Promises-in-ES6"><a href="#Promises-in-ES6" class="headerlink" title="Promises in ES6"></a>Promises in ES6</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">setTimeout(function()&#123;</div><div class="line">      console.log(&apos;Yay!&apos;);</div><div class="line">      setTimeout(function()&#123;</div><div class="line">        console.log(&apos;Wheeyee!&apos;);</div><div class="line">      &#125;, 1000)</div><div class="line">&#125;, 1000);</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var wait1000 =  ()=&gt; new Promise((resolve, reject)=&gt; &#123;setTimeout(resolve, 1000)&#125;);</div><div class="line">wait1000()</div><div class="line">    .then(function() &#123;</div><div class="line">        console.log(&apos;Yay!&apos;)</div><div class="line">        return wait1000()</div><div class="line">    &#125;)</div><div class="line">    .then(function() &#123;</div><div class="line">           console.log(&apos;Wheeyee!&apos;)</div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
+<h4 id="Block-Scoped-Constructs-Let-and-Const（块作用域和构造let和const）"><a href="#Block-Scoped-Constructs-Let-and-Const（块作用域和构造let和const）" class="headerlink" title="Block-Scoped Constructs Let and Const（块作用域和构造let和const）"></a>Block-Scoped Constructs Let and Const（块作用域和构造let和const）</h4><ul>
+<li>Let是一种新的变量申明方式，它允许你把变量作用域控制在块级里面。用大括号定义代码块（作用域）</li>
+<li>const，它就是一个不变量，也是块级作用域就像let一样。</li>
+</ul>
+<p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for(var i=0; i&lt;1; i++)&#123;</div><div class="line">    var a=1;</div><div class="line">    &#123;</div><div class="line">        var  a=2;</div><div class="line">        console.log(a) //2</div><div class="line">    &#125;</div><div class="line">    console.log(a)  //2</div><div class="line">&#125;</div><div class="line">console.log(i) //1</div><div class="line">console.log(a) //2</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for(let i=0; i&lt;1; i++)&#123;</div><div class="line">    const a=1;</div><div class="line">    &#123;</div><div class="line">        const  a=2;</div><div class="line">        console.log(a) //2</div><div class="line">    &#125;</div><div class="line">    console.log(a)  //1</div><div class="line">&#125;</div><div class="line">console.log(a) // not defined</div><div class="line">console.log(i) // not defined</div></pre></td></tr></table></figure>
+<h4 id="Classes-（类）"><a href="#Classes-（类）" class="headerlink" title="Classes （类）"></a>Classes （类）</h4><p><code>before</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function Circle(x) &#123;</div><div class="line">   this.x = x;</div><div class="line">&#125;</div><div class="line">Circle.classFn = function() &#123; ... &#125;</div><div class="line"></div><div class="line">Circle.prototype = &#123;</div><div class="line">   fn1() &#123;</div><div class="line">       return ..;</div><div class="line">   &#125;,</div><div class="line"></div><div class="line">   get fn2() &#123;</div><div class="line">       return this.x;</div><div class="line">   &#125;,</div><div class="line">   set fn2(x) &#123;</div><div class="line">       this.x = x*2;</div><div class="line">   &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Circle &#123;</div><div class="line">    constructor(x) &#123;</div><div class="line">        this.x = x;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    static classFn() &#123; ... &#125;;</div><div class="line"></div><div class="line">    fn1()&#123;</div><div class="line">        return ..;</div><div class="line">    &#125;</div><div class="line">    get fn2() &#123;</div><div class="line">        return this.x;</div><div class="line">    &#125;;</div><div class="line">    set fn2(val) &#123;</div><div class="line">        this.x = x*2;</div><div class="line">    &#125;;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
+<h4 id="Modules-（模块）"><a href="#Modules-（模块）" class="headerlink" title="Modules （模块）"></a>Modules （模块）</h4><p><code>before</code></p>
+<p><code>module.js</code> 有port变量和getAccounts 方法</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;  port: 3000,  getAccounts: function() &#123;    ...  &#125;&#125;</div></pre></td></tr></table></figure>
+<p><code>main.js</code>需要依赖require(‘module’) 导入module.js：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var service = require(&apos;module.js&apos;);console.log(service.port); // 3000</div></pre></td></tr></table></figure>
+<p><code>now</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">导出module.js</div><div class="line">export var port = 3000;export function getAccounts(url) &#123;  ...&#125;</div><div class="line"></div><div class="line">导入方式一</div><div class="line">import &#123;port, getAccounts&#125; from &apos;module&apos;;console.log(port); // 3000</div><div class="line"></div><div class="line">导入方式二</div><div class="line">import * as service from &apos;module&apos;;//导入全部模块</div><div class="line">console.log(service.port); // 3000</div></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/09/01/ES6新特性/" data-id="ciw4vs6h90001e4vyacxwag0h" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/09/01/ES6/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          ES6
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/06/01/WebTechGarden/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">WebTechGarden</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2016/09/30/op/">React Native</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/01/ES6/">ES6</a>
+          </li>
+        
+          <li>
+            <a href="/2016/09/01/ES6新特性/">ES6</a>
+          </li>
+        
+          <li>
+            <a href="/2016/06/01/WebTechGarden/">WebTechGarden</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/10/正则表达式/">正则表达式</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 范明涛<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
