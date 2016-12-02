@@ -90,104 +90,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/30/op/" data-id="ciw4vs6i50007e4vyysx2l40b" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-ES6" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/09/01/ES6/" class="article-date">
-  <time datetime="2016-08-31T16:00:00.000Z" itemprop="datePublished">2016-09-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/09/01/ES6/">ES6</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ES6-特性"><a href="#ES6-特性" class="headerlink" title="ES6 特性"></a>ES6 特性</h1><p>我们先看下都有哪些</p>
-<ul>
-<li>Default Parameters（默认参数）</li>
-<li>Template Literals （模板文本）</li>
-<li>Multi-line Strings （多行字符串）</li>
-<li>Destructuring Assignment （解构赋值）</li>
-<li>Enhanced Object Literals （增强的对象文本）</li>
-<li>Arrow Functions （箭头函数）</li>
-<li>Promises</li>
-<li>Block-Scoped Constructs Let and Const（块作用域构造Let and Const）</li>
-<li>Classes（类）</li>
-<li>Modules（模块）</li>
-</ul>
-<h4 id="Default-Parameters（默认参数）"><a href="#Default-Parameters（默认参数）" class="headerlink" title="Default Parameters（默认参数）"></a>Default Parameters（默认参数）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var fn = function (height) &#123;</div><div class="line">    var height = height || 50;</div><div class="line">       ...;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">var fn = function (height=50) &#123;</div><div class="line">       ...;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="Template-Literals（模板对象）"><a href="#Template-Literals（模板对象）" class="headerlink" title="Template Literals（模板对象）"></a>Template Literals（模板对象）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var name = &apos;Your name is &apos; + first + &apos; &apos; + last + &apos;.&apos;;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var name = `Your name is $&#123;first&#125; $&#123;last&#125;. `;</div></pre></td></tr></table></figure>
-<h4 id="Multi-line-Strings-（多行字符串）"><a href="#Multi-line-Strings-（多行字符串）" class="headerlink" title="Multi-line Strings （多行字符串）"></a>Multi-line Strings （多行字符串）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var roadPoem = &apos;Then took the other, as just as fair,nt&apos;</div><div class="line">                + &apos;Had worn them really about the same,nt&apos;;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">var roadPoem = `Then took the other, as just as fair,</div><div class="line">                Had worn them really about the same,`;</div></pre></td></tr></table></figure>
-<h4 id="Destructuring-Assignment-（解构赋值）"><a href="#Destructuring-Assignment-（解构赋值）" class="headerlink" title="Destructuring Assignment （解构赋值）"></a>Destructuring Assignment （解构赋值）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">someArray=[1,2,3];</div><div class="line">var first = someArray[0];</div><div class="line">var second = someArray[1];</div><div class="line">var third = someArray[2];</div><div class="line"></div><div class="line">var obj=&#123; foo: &quot;lorem&quot;, bar: &quot;ipsum&quot; &#125;;</div><div class="line">var foo = obj.foo;</div><div class="line">var bar = obj.bar;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">someArray=[1,2,3];</div><div class="line">var [first, second, third] = someArray;</div><div class="line">console.log(first);  // 1</div><div class="line">console.log(second); // 2</div><div class="line">console.log(third);  // 3</div><div class="line"></div><div class="line">var &#123; foo, bar &#125; = &#123; foo: &quot;lorem&quot;, bar: &quot;ipsum&quot; &#125;;</div><div class="line">console.log(foo); // &quot;lorem&quot;</div><div class="line">console.log(bar); // &quot;ipsum&quot;</div></pre></td></tr></table></figure>
-<h4 id="Enhanced-Object-Literals-（增强的对象字面量）"><a href="#Enhanced-Object-Literals-（增强的对象字面量）" class="headerlink" title="Enhanced Object Literals （增强的对象字面量）"></a>Enhanced Object Literals （增强的对象字面量）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    handler: handler,</div><div class="line">    toString: function() &#123;</div><div class="line">        return &quot;d &quot; + super.toString();</div><div class="line">    &#125;,</div><div class="line">    prop42: 42</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">var obj = &#123;</div><div class="line">    handler,   //ES6特性 === handler: handler,</div><div class="line">    toString() &#123;   //ES6函数</div><div class="line">        return &quot;d &quot; + super.toString();</div><div class="line">       &#125;,</div><div class="line">    [ &apos;prop_&apos; + (() =&gt; 42)() ]: 42  </div><div class="line">    //主要是这个可以在字面量中加入变量 == prop42: 42</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<h4 id="Arrow-Functions-in（箭头函数）"><a href="#Arrow-Functions-in（箭头函数）" class="headerlink" title="Arrow Functions in（箭头函数）"></a>Arrow Functions in（箭头函数）</h4><p>以前我们使用闭包，this总是预期之外地产生改变，而箭头函数的迷人之处在于，现在你的this可以按照你的预期使用了，身处箭头函数里面，this还是原来的this.</p>
-<p>有了箭头函数在ES6中， 我们就不必用that = this或 self = this 或 _this = this 或.bind(this)如下:</p>
-<p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">var _this = this;</div><div class="line">$(&apos;.btn&apos;).click(function(event)&#123;</div><div class="line">     _this.sendData();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$(&apos;.btn&apos;).click((event) =&gt;&#123;</div><div class="line">      this.sendData();</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
-<h4 id="Promises-in-ES6"><a href="#Promises-in-ES6" class="headerlink" title="Promises in ES6"></a>Promises in ES6</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">setTimeout(function()&#123;</div><div class="line">      console.log(&apos;Yay!&apos;);</div><div class="line">      setTimeout(function()&#123;</div><div class="line">        console.log(&apos;Wheeyee!&apos;);</div><div class="line">      &#125;, 1000)</div><div class="line">&#125;, 1000);</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var wait1000 =  ()=&gt; new Promise((resolve, reject)=&gt; &#123;setTimeout(resolve, 1000)&#125;);</div><div class="line">wait1000()</div><div class="line">    .then(function() &#123;</div><div class="line">        console.log(&apos;Yay!&apos;)</div><div class="line">        return wait1000()</div><div class="line">    &#125;)</div><div class="line">    .then(function() &#123;</div><div class="line">           console.log(&apos;Wheeyee!&apos;)</div><div class="line">       &#125;);</div></pre></td></tr></table></figure>
-<h4 id="Block-Scoped-Constructs-Let-and-Const（块作用域和构造let和const）"><a href="#Block-Scoped-Constructs-Let-and-Const（块作用域和构造let和const）" class="headerlink" title="Block-Scoped Constructs Let and Const（块作用域和构造let和const）"></a>Block-Scoped Constructs Let and Const（块作用域和构造let和const）</h4><ul>
-<li>Let是一种新的变量申明方式，它允许你把变量作用域控制在块级里面。用大括号定义代码块（作用域）</li>
-<li>const，它就是一个不变量，也是块级作用域就像let一样。</li>
-</ul>
-<p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for(var i=0; i&lt;1; i++)&#123;</div><div class="line">    var a=1;</div><div class="line">    &#123;</div><div class="line">        var  a=2;</div><div class="line">        console.log(a) //2</div><div class="line">    &#125;</div><div class="line">    console.log(a)  //2</div><div class="line">&#125;</div><div class="line">console.log(i) //1</div><div class="line">console.log(a) //2</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">for(let i=0; i&lt;1; i++)&#123;</div><div class="line">    const a=1;</div><div class="line">    &#123;</div><div class="line">        const  a=2;</div><div class="line">        console.log(a) //2</div><div class="line">    &#125;</div><div class="line">    console.log(a)  //1</div><div class="line">&#125;</div><div class="line">console.log(a) // not defined</div><div class="line">console.log(i) // not defined</div></pre></td></tr></table></figure>
-<h4 id="Classes-（类）"><a href="#Classes-（类）" class="headerlink" title="Classes （类）"></a>Classes （类）</h4><p><code>before</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">function Circle(x) &#123;</div><div class="line">   this.x = x;</div><div class="line">&#125;</div><div class="line">Circle.classFn = function() &#123; ... &#125;</div><div class="line"></div><div class="line">Circle.prototype = &#123;</div><div class="line">   fn1() &#123;</div><div class="line">       return ..;</div><div class="line">   &#125;,</div><div class="line"></div><div class="line">   get fn2() &#123;</div><div class="line">       return this.x;</div><div class="line">   &#125;,</div><div class="line">   set fn2(x) &#123;</div><div class="line">       this.x = x*2;</div><div class="line">   &#125;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line">class Circle &#123;</div><div class="line">    constructor(x) &#123;</div><div class="line">        this.x = x;</div><div class="line">    &#125;;</div><div class="line"></div><div class="line">    static classFn() &#123; ... &#125;;</div><div class="line"></div><div class="line">    fn1()&#123;</div><div class="line">        return ..;</div><div class="line">    &#125;</div><div class="line">    get fn2() &#123;</div><div class="line">        return this.x;</div><div class="line">    &#125;;</div><div class="line">    set fn2(val) &#123;</div><div class="line">        this.x = x*2;</div><div class="line">    &#125;;</div><div class="line"> &#125;</div></pre></td></tr></table></figure>
-<h4 id="Modules-（模块）"><a href="#Modules-（模块）" class="headerlink" title="Modules （模块）"></a>Modules （模块）</h4><p><code>before</code></p>
-<p><code>module.js</code> 有port变量和getAccounts 方法</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">module.exports = &#123;  port: 3000,  getAccounts: function() &#123;    ...  &#125;&#125;</div></pre></td></tr></table></figure>
-<p><code>main.js</code>需要依赖require(‘module’) 导入module.js：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var service = require(&apos;module.js&apos;);console.log(service.port); // 3000</div></pre></td></tr></table></figure>
-<p><code>now</code></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">导出module.js</div><div class="line">export var port = 3000;export function getAccounts(url) &#123;  ...&#125;</div><div class="line"></div><div class="line">导入方式一</div><div class="line">import &#123;port, getAccounts&#125; from &apos;module&apos;;console.log(port); // 3000</div><div class="line"></div><div class="line">导入方式二</div><div class="line">import * as service from &apos;module&apos;;//导入全部模块</div><div class="line">console.log(service.port); // 3000</div></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/01/ES6/" data-id="ciw4vs6h40000e4vy0mbjk1ug" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/30/op/" data-id="ciw7txc5i0007y2vyrb3gyxdb" class="article-share-link">Share</a>
       
       
     </footer>
@@ -284,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/09/01/ES6新特性/" data-id="ciw4vs6h90001e4vyacxwag0h" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/09/01/ES6新特性/" data-id="ciw7txc4h0003y2vyi8b9qhzs" class="article-share-link">Share</a>
       
       
     </footer>
@@ -368,7 +271,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/06/01/WebTechGarden/" data-id="ciw4vs6he0003e4vy73qs1p2o" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/06/01/WebTechGarden/" data-id="ciw7txc470000y2vy9vtk97cd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -447,7 +350,72 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/10/正则表达式/" data-id="ciw4vs6i40006e4vy2mtp8e47" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/05/10/正则表达式/" data-id="ciw7txc6b0008y2vymr6zo59d" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-前端自动化工具之—gulp" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2016/05/01/前端自动化工具之—gulp/" class="article-date">
+  <time datetime="2016-04-30T16:00:00.000Z" itemprop="datePublished">2016-05-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/01/前端自动化工具之—gulp/">前端自动化工具之—gulp</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>  gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?</p>
+<h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><p>1.1 因为gulp是基于node,所以首先我们需要搭建node环境。这一步非常简单，进入node.js官网下载所对应的版本。下载后傻瓜式安装即可。</p>
+<p>1.2 打开命令行(window + r)</p>
+<p>node -v 查看安装的nodejs版本，出现版本号，说明刚刚已正确安装nodejs</p>
+<h4 id="2-安装npm"><a href="#2-安装npm" class="headerlink" title="2.安装npm"></a>2.安装npm</h4><p>2.1 npm是nodejs的包管理器，用于node插件管理（包括安装、卸载、管理依赖等）。</p>
+<p>npm -v 查看npm版本号</p>
+<p>2.2 使用npm安装插件</p>
+<p>npm install gulp-less –save-dev 以安装less为例</p>
+<p>2.3 由于npm安装插件是从国外服务器下载，可能出现异常，所以可以直接选择安装cnpm!</p>
+<p>npm install cnpm -g –registry=<a href="https://registry.npm.taobao.org" target="_blank" rel="external">https://registry.npm.taobao.org</a></p>
+<p><code>cnpm与npm的用法完全一致，执行命令时可以将npm用cnpm代替。</code></p>
+<h4 id="3-全局安装gulp"><a href="#3-全局安装gulp" class="headerlink" title="3.全局安装gulp"></a>3.全局安装gulp</h4><p>3.1 安装命令</p>
+<p>cnpm install gulp -g</p>
+<p>3.2 查看版本</p>
+<p>gulp -v</p>
+<h4 id="4-新建pakage-json文件"><a href="#4-新建pakage-json文件" class="headerlink" title="4.新建pakage.json文件"></a>4.新建pakage.json文件</h4><p>4.1 package.json是基于nodejs项目必不可少的配置文件，存放在项目根目录下。</p>
+<p>4.2 定位到项目文件</p>
+<p>cd 项目文件位置</p>
+<p>4.3 新建命令</p>
+<p>cnpm init</p>
+<p>然后一直回车，package.json就新建完成了。不过要注意的是此文件不能添加任何注释哦~</p>
+<h4 id="5-本地安装gulp"><a href="#5-本地安装gulp" class="headerlink" title="5.本地安装gulp"></a>5.本地安装gulp</h4><p>5.1 本地安装gulp（定位到项目文件）</p>
+<p>cnpm install gulp –save-dev</p>
+<p>在这里要跟大家说明的是全局安装gulp是为了执行gulp任务，本地安装gulp则是为了调用gulp的插件。</p>
+<p>5.2 安装插件</p>
+<p>cnpm install gulp-sass –save-dev 以安装sass插件为例</p>
+<h4 id="6-新建gulpfile-js文件"><a href="#6-新建gulpfile-js文件" class="headerlink" title="6.新建gulpfile.js文件"></a>6.新建gulpfile.js文件</h4><p><code>6.1 gulpfile.js是gulp项目的配置文件, 基本如下：</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">//导入工具包 require(&apos;node_modules里对应模块&apos;)</div><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var less = require(&apos;gulp-less&apos;);	                 //编译less</div><div class="line">var sass = require(&apos;gulp-sass&apos;);                     //编译sass</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);           //html压缩</div><div class="line">var minifycss = require(&apos;gulp-minify-css&apos;);     //css压缩</div><div class="line">var concat = require(&apos;gulp-concat&apos;);               //文件合并</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);                    //js压缩</div><div class="line">var rename = require(&apos;gulp-rename&apos;);	           //重命名</div><div class="line">var jshint = require(&apos;gulp-jshint&apos;);	                   //js检查</div><div class="line">var imagemin = require(&apos;gulp-imagemin&apos;);	    //压缩图片</div><div class="line">var cache = require(&apos;gulp-cache&apos;);                //图片压缩缓存</div><div class="line">var clean = require(&apos;gulp-clean&apos;);	                 //清空文件夹</div><div class="line">var rev = require(&apos;gulp-rev&apos;);	     //更改版本号//定义一个less任务（自定义任务名称）</div><div class="line">gulp.task(&apos;less&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/style.less&apos;)              //需要操作的文件</div><div class="line">        .pipe(less())	                                     //该任务调用的模块</div><div class="line">        .pipe(gulp.dest(&apos;./dest&apos;))	                    //文件导出的位置</div><div class="line">&#125;)</div><div class="line">//定义一个sass任务（自定义任务名称）</div><div class="line">gulp.task(&apos;sass&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/style2.scss&apos;)</div><div class="line">        .pipe(sass())</div><div class="line">        .pipe(gulp.dest(&apos;./dest&apos;))</div><div class="line">&#125;)</div><div class="line">//语法检查</div><div class="line">gulp.task(&apos;jshint&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/js/*.js&apos;)</div><div class="line">        .pipe(jshint())</div><div class="line">        .pipe(jshint.reporter(&apos;default&apos;));</div><div class="line">&#125;);</div><div class="line">//压缩html</div><div class="line">gulp.task(&apos;htmlmin&apos;, function () &#123;</div><div class="line">    var options = &#123;</div><div class="line">        collapseWhitespace: true,</div><div class="line">        collapseBooleanAttributes: true,</div><div class="line">        removeComments: true,</div><div class="line">        removeEmptyAttributes: true,</div><div class="line">        removeScriptTypeAttributes: true,</div><div class="line">        removeStyleLinkTypeAttributes: true,</div><div class="line">        minifyJS: true,</div><div class="line">        minifyCSS: true</div><div class="line">    &#125;;</div><div class="line">    gulp.src(&apos;./src/html/*.html&apos;)</div><div class="line">        .pipe(htmlmin(options))</div><div class="line">        .pipe(gulp.dest(&apos;html&apos;));</div><div class="line">&#125;);</div><div class="line">//压缩css</div><div class="line">gulp.task(&apos;minifycss&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/css/*.css&apos;)</div><div class="line">        .pipe(concat(&apos;main.css&apos;))    	//合并所有css到all.css</div><div class="line">        .pipe(gulp.dest(&apos;css&apos;))   //输出文件夹</div><div class="line">        .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))   //rename压缩后的文件名</div><div class="line">        .pipe(minifycss())   //执行压缩</div><div class="line">        .pipe(gulp.dest(&apos;css&apos;));   //输出文件夹</div><div class="line">&#125;);</div><div class="line">//压缩，合并 js</div><div class="line">gulp.task(&apos;minifyjs&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/js/*.js&apos;)</div><div class="line">        .pipe(concat(&apos;event.js&apos;))    	//合并所有js到main.js</div><div class="line">        .pipe(gulp.dest(&apos;js&apos;))      	   //输出到文件夹</div><div class="line">        .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))     //rename压缩后的文件名</div><div class="line">        .pipe(uglify())    	//压缩</div><div class="line">        .pipe(gulp.dest(&apos;js&apos;));  	//输出</div><div class="line">&#125;);</div><div class="line">//压缩图片</div><div class="line">gulp.task(&apos;minifyImg&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/img/*&apos;)</div><div class="line">        .pipe(imagemin())</div><div class="line">        .pipe(gulp.dest(&apos;image&apos;));</div><div class="line">&#125;)</div><div class="line">//文件清理</div><div class="line">//执行压缩前，先删除以前压缩的文件</div><div class="line">gulp.task(&apos;clean&apos;, function () &#123;</div><div class="line">    return del([&apos;./css/all.css&apos;, &apos;./css/all.min.css&apos;, &apos;./lib/all.js&apos;, &apos;./lib/all.min.js&apos;])</div><div class="line">&#125;);</div><div class="line">//定义默认任务</div><div class="line">//压缩js需要在检查js之后操作</div><div class="line">gulp.task(&apos;default&apos;, [&apos;less&apos;, &apos;sass&apos;, &apos;jshint&apos;], function () &#123;</div><div class="line">    gulp.start(&apos;minifycss&apos;, &apos;minifyjs&apos;, &apos;minifyImg&apos;, &apos;htmlmin&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h4 id="7-运行gulp"><a href="#7-运行gulp" class="headerlink" title="7.运行gulp"></a>7.运行gulp</h4><p>最后回到命令行，直接输入gulp即可运行！</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2016/05/01/前端自动化工具之—gulp/" data-id="ciw7txc4r0006y2vylensh11e" class="article-share-link">Share</a>
       
       
     </footer>
@@ -721,7 +689,7 @@ return;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/04/13/node-js/" data-id="ciw4vs6hi0005e4vyo9fj6t6m" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/04/13/node-js/" data-id="ciw7txc4i0004y2vy0b92gv1a" class="article-share-link">Share</a>
       
       
     </footer>
@@ -758,7 +726,7 @@ return;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/01/01/16个上谷歌的方法/" data-id="ciw4vs6il0008e4vyitjv6n86" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2016/01/01/16个上谷歌的方法/" data-id="ciw7txc4c0001y2vyn61rd0b8" class="article-share-link">Share</a>
       
       
     </footer>
@@ -835,7 +803,7 @@ return;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/11/01/Mongodb/" data-id="ciw4vs6hc0002e4vy4tv5wdmo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/11/01/Mongodb/" data-id="ciw7txc4l0005y2vyymw4qo2m" class="article-share-link">Share</a>
       
       
     </footer>
@@ -877,7 +845,7 @@ return;
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/25/HTML优化/" data-id="ciw4vs6hf0004e4vym1o4im8x" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2015/10/25/HTML优化/" data-id="ciw7txc4e0002y2vy74yaoit3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -921,10 +889,6 @@ return;
           </li>
         
           <li>
-            <a href="/2016/09/01/ES6/">ES6</a>
-          </li>
-        
-          <li>
             <a href="/2016/09/01/ES6新特性/">ES6</a>
           </li>
         
@@ -934,6 +898,10 @@ return;
         
           <li>
             <a href="/2016/05/10/正则表达式/">正则表达式</a>
+          </li>
+        
+          <li>
+            <a href="/2016/05/01/前端自动化工具之—gulp/">前端自动化工具之—gulp</a>
           </li>
         
       </ul>
