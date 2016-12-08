@@ -1,94 +1,179 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>前端自动化工具之—gulp | 大民</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      前端自动化工具之—gulp | 大民 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="范明涛">
+    
+    
+
+    <meta name="description" content="gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?
 1.安装node.js1.1 因为gulp是基于node,所以首先我们需要搭建node环境。这一步非常简单，进入node.js官网下载所对应的版本。下载后傻瓜式安装即可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="前端自动化工具之—gulp">
+<meta property="og:title" content="前端自动化工具之—gulp | 大民">
 <meta property="og:url" content="http://yoursite.com/2016/05/01/前端自动化工具之—gulp/index.html">
 <meta property="og:site_name" content="大民">
 <meta property="og:description" content="gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?
 1.安装node.js1.1 因为gulp是基于node,所以首先我们需要搭建node环境。这一步非常简单，进入node.js官网下载所对应的版本。下载后傻瓜式安装即可">
 <meta property="og:updated_time" content="2016-12-02T13:31:29.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="前端自动化工具之—gulp">
+<meta name="twitter:title" content="前端自动化工具之—gulp | 大民">
 <meta name="twitter:description" content="gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?
 1.安装node.js1.1 因为gulp是基于node,所以首先我们需要搭建node环境。这一步非常简单，进入node.js官网下载所对应的版本。下载后傻瓜式安装即可">
-  
-    <link rel="alternate" href="/atom.xml" title="大民" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">大民</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
         
-          <a class="main-nav-link" href="/">Home</a>
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">大民</a></h1>
+        <hr class="panel-cover__divider" />
+
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
       </div>
+
     </div>
+
+    <div class="panel-cover--overlay"></div>
   </div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-前端自动化工具之—gulp" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/05/01/前端自动化工具之—gulp/" class="article-date">
-  <time datetime="2016-04-30T16:00:00.000Z" itemprop="datePublished">2016-05-01</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      前端自动化工具之—gulp
-    </h1>
-  
 
-      </header>
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>  gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?</p>
+    <h1 class="post-title">前端自动化工具之—gulp</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-05-01" class="post-meta__date date">2016-05-01</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <p>  gulp是前端自动化工具，它可以进行html压缩、css压缩合并、js检查压缩、图片压缩、编译less、编译sass等，还可以自动完成开发过程中一些重复的的任务，使我们的工作效率大大的提高呀！那具体如何配置以及使用gulp呢?</p>
 <h4 id="1-安装node-js"><a href="#1-安装node-js" class="headerlink" title="1.安装node.js"></a>1.安装node.js</h4><p>1.1 因为gulp是基于node,所以首先我们需要搭建node环境。这一步非常简单，进入node.js官网下载所对应的版本。下载后傻瓜式安装即可。</p>
 <p>1.2 打开命令行(window + r)</p>
 <p>node -v 查看安装的nodejs版本，出现版本号，说明刚刚已正确安装nodejs</p>
@@ -118,122 +203,58 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div></pre></td><td class="code"><pre><div class="line">//导入工具包 require(&apos;node_modules里对应模块&apos;)</div><div class="line">var gulp = require(&apos;gulp&apos;);</div><div class="line">var less = require(&apos;gulp-less&apos;);	                 //编译less</div><div class="line">var sass = require(&apos;gulp-sass&apos;);                     //编译sass</div><div class="line">var htmlmin = require(&apos;gulp-htmlmin&apos;);           //html压缩</div><div class="line">var minifycss = require(&apos;gulp-minify-css&apos;);     //css压缩</div><div class="line">var concat = require(&apos;gulp-concat&apos;);               //文件合并</div><div class="line">var uglify = require(&apos;gulp-uglify&apos;);                    //js压缩</div><div class="line">var rename = require(&apos;gulp-rename&apos;);	           //重命名</div><div class="line">var jshint = require(&apos;gulp-jshint&apos;);	                   //js检查</div><div class="line">var imagemin = require(&apos;gulp-imagemin&apos;);	    //压缩图片</div><div class="line">var cache = require(&apos;gulp-cache&apos;);                //图片压缩缓存</div><div class="line">var clean = require(&apos;gulp-clean&apos;);	                 //清空文件夹</div><div class="line">var rev = require(&apos;gulp-rev&apos;);	     //更改版本号//定义一个less任务（自定义任务名称）</div><div class="line">gulp.task(&apos;less&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/style.less&apos;)              //需要操作的文件</div><div class="line">        .pipe(less())	                                     //该任务调用的模块</div><div class="line">        .pipe(gulp.dest(&apos;./dest&apos;))	                    //文件导出的位置</div><div class="line">&#125;)</div><div class="line">//定义一个sass任务（自定义任务名称）</div><div class="line">gulp.task(&apos;sass&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/style2.scss&apos;)</div><div class="line">        .pipe(sass())</div><div class="line">        .pipe(gulp.dest(&apos;./dest&apos;))</div><div class="line">&#125;)</div><div class="line">//语法检查</div><div class="line">gulp.task(&apos;jshint&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/js/*.js&apos;)</div><div class="line">        .pipe(jshint())</div><div class="line">        .pipe(jshint.reporter(&apos;default&apos;));</div><div class="line">&#125;);</div><div class="line">//压缩html</div><div class="line">gulp.task(&apos;htmlmin&apos;, function () &#123;</div><div class="line">    var options = &#123;</div><div class="line">        collapseWhitespace: true,</div><div class="line">        collapseBooleanAttributes: true,</div><div class="line">        removeComments: true,</div><div class="line">        removeEmptyAttributes: true,</div><div class="line">        removeScriptTypeAttributes: true,</div><div class="line">        removeStyleLinkTypeAttributes: true,</div><div class="line">        minifyJS: true,</div><div class="line">        minifyCSS: true</div><div class="line">    &#125;;</div><div class="line">    gulp.src(&apos;./src/html/*.html&apos;)</div><div class="line">        .pipe(htmlmin(options))</div><div class="line">        .pipe(gulp.dest(&apos;html&apos;));</div><div class="line">&#125;);</div><div class="line">//压缩css</div><div class="line">gulp.task(&apos;minifycss&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/css/*.css&apos;)</div><div class="line">        .pipe(concat(&apos;main.css&apos;))    	//合并所有css到all.css</div><div class="line">        .pipe(gulp.dest(&apos;css&apos;))   //输出文件夹</div><div class="line">        .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))   //rename压缩后的文件名</div><div class="line">        .pipe(minifycss())   //执行压缩</div><div class="line">        .pipe(gulp.dest(&apos;css&apos;));   //输出文件夹</div><div class="line">&#125;);</div><div class="line">//压缩，合并 js</div><div class="line">gulp.task(&apos;minifyjs&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/js/*.js&apos;)</div><div class="line">        .pipe(concat(&apos;event.js&apos;))    	//合并所有js到main.js</div><div class="line">        .pipe(gulp.dest(&apos;js&apos;))      	   //输出到文件夹</div><div class="line">        .pipe(rename(&#123;suffix: &apos;.min&apos;&#125;))     //rename压缩后的文件名</div><div class="line">        .pipe(uglify())    	//压缩</div><div class="line">        .pipe(gulp.dest(&apos;js&apos;));  	//输出</div><div class="line">&#125;);</div><div class="line">//压缩图片</div><div class="line">gulp.task(&apos;minifyImg&apos;, function () &#123;</div><div class="line">    return gulp.src(&apos;./src/img/*&apos;)</div><div class="line">        .pipe(imagemin())</div><div class="line">        .pipe(gulp.dest(&apos;image&apos;));</div><div class="line">&#125;)</div><div class="line">//文件清理</div><div class="line">//执行压缩前，先删除以前压缩的文件</div><div class="line">gulp.task(&apos;clean&apos;, function () &#123;</div><div class="line">    return del([&apos;./css/all.css&apos;, &apos;./css/all.min.css&apos;, &apos;./lib/all.js&apos;, &apos;./lib/all.min.js&apos;])</div><div class="line">&#125;);</div><div class="line">//定义默认任务</div><div class="line">//压缩js需要在检查js之后操作</div><div class="line">gulp.task(&apos;default&apos;, [&apos;less&apos;, &apos;sass&apos;, &apos;jshint&apos;], function () &#123;</div><div class="line">    gulp.start(&apos;minifycss&apos;, &apos;minifyjs&apos;, &apos;minifyImg&apos;, &apos;htmlmin&apos;);</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 <h4 id="7-运行gulp"><a href="#7-运行gulp" class="headerlink" title="7.运行gulp"></a>7.运行gulp</h4><p>最后回到命令行，直接输入gulp即可运行！</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/05/01/前端自动化工具之—gulp/" data-id="ciw963jqy0008sbvy2s6ww396" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2016/05/10/正则表达式/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          正则表达式
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2016/04/13/node-js/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">node.js之fs模块</div>
-    </a>
-  
-</nav>
+  </section>
 
+  
   
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
+            <footer class="footer">
 
-  
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
     
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/11/01/协议入门/">协议入门</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/30/op/">React Native</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/01/ES6新特性/">ES6</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/01/WebTechGarden/">WebTechGarden</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/10/正则表达式/">正则表达式</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 范明涛<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+        </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
 
 
-<script src="/js/script.js"></script>
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
 
-  </div>
 </body>
 </html>

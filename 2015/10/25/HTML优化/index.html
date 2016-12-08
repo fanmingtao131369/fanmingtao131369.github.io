@@ -1,211 +1,237 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  
-  <title>HTML 优化 | 大民</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      HTML 优化 | 大民 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="范明涛">
+    
+    
+
+    <meta name="description" content="1.减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。
 2.把CSS放到顶部网页上的资源加载时从上网下顺序加载的，所以css放在页面的顶部能够优先渲染页面，让用户感觉页面加载很快。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTML 优化">
+<meta property="og:title" content="HTML 优化 | 大民">
 <meta property="og:url" content="http://yoursite.com/2015/10/25/HTML优化/index.html">
 <meta property="og:site_name" content="大民">
 <meta property="og:description" content="1.减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。
 2.把CSS放到顶部网页上的资源加载时从上网下顺序加载的，所以css放在页面的顶部能够优先渲染页面，让用户感觉页面加载很快。">
 <meta property="og:updated_time" content="2016-11-12T08:49:01.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTML 优化">
+<meta name="twitter:title" content="HTML 优化 | 大民">
 <meta name="twitter:description" content="1.减少HTTP请求次数尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。
 2.把CSS放到顶部网页上的资源加载时从上网下顺序加载的，所以css放在页面的顶部能够优先渲染页面，让用户感觉页面加载很快。">
-  
-    <link rel="alternate" href="/atom.xml" title="大民" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
 
 </head>
-
 <body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">大民</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
         
-          <a class="main-nav-link" href="/">Home</a>
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">大民</a></h1>
+        <hr class="panel-cover__divider" />
+
         
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="搜索"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
       </div>
+
     </div>
+
+    <div class="panel-cover--overlay"></div>
   </div>
 </header>
-      <div class="outer">
-        <section id="main"><article id="post-HTML优化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2015/10/25/HTML优化/" class="article-date">
-  <time datetime="2015-10-24T16:00:00.000Z" itemprop="datePublished">2015-10-25</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      HTML 优化
-    </h1>
-  
 
-      </header>
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
     
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-减少HTTP请求次数"><a href="#1-减少HTTP请求次数" class="headerlink" title="1.减少HTTP请求次数"></a>1.减少HTTP请求次数</h3><p>尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。</p>
+    <h1 class="post-title">HTML 优化</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2015-10-25" class="post-meta__date date">2015-10-25</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="1-减少HTTP请求次数"><a href="#1-减少HTTP请求次数" class="headerlink" title="1.减少HTTP请求次数"></a>1.减少HTTP请求次数</h3><p>尽量合并图片、CSS、JS。比如加载一个页面，如果有5个css文件的话，那么会发出5次http请求，这样会让用户第一次访问你的页面的时候会长时间等待。而如果把这个5个文件合成一个的话，就只需要发出一次http请求，节省网络请求时间，加快页面的加载。</p>
 <h3 id="2-把CSS放到顶部"><a href="#2-把CSS放到顶部" class="headerlink" title="2.把CSS放到顶部"></a>2.把CSS放到顶部</h3><p>网页上的资源加载时从上网下顺序加载的，所以css放在页面的顶部能够优先渲染页面，让用户感觉页面加载很快。</p>
 <h3 id="3-把JS放到底部"><a href="#3-把JS放到底部" class="headerlink" title="3.把JS放到底部"></a>3.把JS放到底部</h3><p>加载js时会对后续的资源造成阻塞，必须得等js加载完才去加载后续的文件 ，所以就把js放在页面底部最后加载。</p>
 <h3 id="4-将CSS和JS放到外部文件中"><a href="#4-将CSS和JS放到外部文件中" class="headerlink" title="4.将CSS和JS放到外部文件中"></a>4.将CSS和JS放到外部文件中</h3><p>目的是缓存文件，可以参考原则4。 但有时候为了减少请求，也会直接写到页面里，需根据PV和IP的比例权衡。</p>
 <h3 id="5-删除重复的JS和CSS"><a href="#5-删除重复的JS和CSS" class="headerlink" title="5.删除重复的JS和CSS"></a>5.删除重复的JS和CSS</h3><p>重复调用脚本，除了增加额外的HTTP请求外，多次运算也会浪费时间。在IE和Firefox中不管脚本是否可缓存，它们都存在重复运算JavaScript的问题。</p>
 <h3 id="6-减少DOM元素数量"><a href="#6-减少DOM元素数量" class="headerlink" title="6. 减少DOM元素数量"></a>6. 减少DOM元素数量</h3><p>这是一门大学问，这里可以引申出一堆优化的细节。想要具体研究的可以看后面推荐书籍。总之大原则减少DOM数量，就会减少浏览器的解析负担。</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2015/10/25/HTML优化/" data-id="ciw963jqb0000sbvyizl43u61" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-    <a href="/2015/11/01/Mongodb/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Mongodb
-        
-      </div>
-    </a>
-  
-  
-</nav>
+  </section>
 
+  
   
 </article>
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
 
-  
-    
+            <footer class="footer">
 
-  
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
     
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">归档</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/11/">十一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/09/">九月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/06/">六月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/05/">五月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/04/">四月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/01/">一月 2016</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">十一月 2015</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/10/">十月 2015</a></li></ul>
-    </div>
-  </div>
-
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">最新文章</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/11/01/协议入门/">协议入门</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/30/op/">React Native</a>
-          </li>
-        
-          <li>
-            <a href="/2016/09/01/ES6新特性/">ES6</a>
-          </li>
-        
-          <li>
-            <a href="/2016/06/01/WebTechGarden/">WebTechGarden</a>
-          </li>
-        
-          <li>
-            <a href="/2016/05/10/正则表达式/">正则表达式</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 范明涛<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
 </footer>
+        </div>
     </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
     
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
 
 
-<script src="/js/script.js"></script>
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
 
-  </div>
 </body>
 </html>
