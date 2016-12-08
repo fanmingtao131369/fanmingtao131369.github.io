@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      聊一聊H5应用缓存-Manifest | 大民 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="范明涛">
+    
+    
+
+    <meta name="description" content="导读
+Manifest 是 H5提供的一种应用缓存机制, 基于它web应用可以实现离线访问(offline cache). 为此, 浏览器还提供了应用缓存的api–applicationCache. 虽然manifest的技术已被web标准废弃, 但这不影响我们尝试去了解它. 也正是因为manifest的应用缓存机制如此诱人, 饿了么 和 office 365邮箱都还在使用着它!
+描述
+对mani">
+<meta property="og:type" content="article">
+<meta property="og:title" content="聊一聊H5应用缓存-Manifest | 大民">
+<meta property="og:url" content="http://yoursite.com/2016/11/26/聊一聊H5应用缓存-Manifest/index.html">
+<meta property="og:site_name" content="大民">
+<meta property="og:description" content="导读
+Manifest 是 H5提供的一种应用缓存机制, 基于它web应用可以实现离线访问(offline cache). 为此, 浏览器还提供了应用缓存的api–applicationCache. 虽然manifest的技术已被web标准废弃, 但这不影响我们尝试去了解它. 也正是因为manifest的应用缓存机制如此诱人, 饿了么 和 office 365邮箱都还在使用着它!
+描述
+对mani">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/006y8lVagw1fa479nwxhmj30pm08hdgj.jpg">
+<meta property="og:updated_time" content="2016-12-08T09:41:26.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="聊一聊H5应用缓存-Manifest | 大民">
+<meta name="twitter:description" content="导读
+Manifest 是 H5提供的一种应用缓存机制, 基于它web应用可以实现离线访问(offline cache). 为此, 浏览器还提供了应用缓存的api–applicationCache. 虽然manifest的技术已被web标准废弃, 但这不影响我们尝试去了解它. 也正是因为manifest的应用缓存机制如此诱人, 饿了么 和 office 365邮箱都还在使用着它!
+描述
+对mani">
+<meta name="twitter:image" content="http://ww2.sinaimg.cn/large/006y8lVagw1fa479nwxhmj30pm08hdgj.jpg">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">大民</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">聊一聊H5应用缓存-Manifest</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-11-26" class="post-meta__date date">2016-11-26</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h4 id="导读"><a href="#导读" class="headerlink" title="导读"></a>导读</h4><hr>
+<p>Manifest 是 H5提供的一种应用缓存机制, 基于它web应用可以实现离线访问(offline cache). 为此, 浏览器还提供了应用缓存的api–applicationCache. 虽然manifest的技术已被web标准废弃, 但这不影响我们尝试去了解它. 也正是因为manifest的应用缓存机制如此诱人, 饿了么 和 office 365邮箱都还在使用着它!</p>
+<h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><hr>
+<p>对manifest熟悉的同学可以跳过此节.<br>鉴于manifest应用缓存的技术, 我们可以做到:</p>
+<ul>
+<li>离线访问: 即使服务器挂了, 或者没有网络, 用户依然可以正常浏览网页内容.</li>
+<li>访问更快: 数据存在于本地, 省去了浏览器发起http请求的时间, 因此访问更快, 移动端效果更为明显.</li>
+<li>降低负载: 浏览器只在manifest文件改动时才去服务器下载需要缓存的资源, 大大降低了服务器负载.</li>
+</ul>
+<p>manifest缓存的过程如下(来自网络):<br><img src="http://ww2.sinaimg.cn/large/006y8lVagw1fa479nwxhmj30pm08hdgj.jpg" alt="Mou icon"></p>
+<h4 id="支持性"><a href="#支持性" class="headerlink" title="支持性"></a>支持性</h4><p>主流浏览器都支持manifest应用缓存技术. 如下表格:</p>
+<p>IE | Edge | Firefox | Chrome | Safari | Opera | ios | Android|<br>|:———–: | :———–: | :———–: |<br>10+ | 12+ | 3.5+ | 4+ | 4+ | 11.5+ | 7.1+ | 2.3+ |</p>
+<p>H5标准中, Offline Web applications 部分有如下描述:</p>
+<p><code>This feature is in the process of being removed from the Web platform. (This is a long process that takes many years.) Using any of the offline Web application features at this time is highly discouraged. Use service workers instead. [SW]</code></p>
+<p>因此后续我将在其他文章中继续介绍 service workers, 本篇继续关注manifest.</p>
+<h4 id="如何开启应用缓存"><a href="#如何开启应用缓存" class="headerlink" title="如何开启应用缓存"></a>如何开启应用缓存</h4><p>manifest使用缓存清单进行管理, 缓存清单需要与html标签进行关联. 如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">&lt;html manifest=&quot;test.appcache&quot;&gt;</div><div class="line">  ...</div><div class="line">&lt;/html&gt;</div></pre></td></tr></table></figure>
+<p>在html标签中指定manifest文件, 便表示该网页使用manifest进行离线缓存. 该网页内需要缓存的文件列表需要在 test.appcache 文本文件中指定.</p>
+<h4 id="manifest缓存清单"><a href="#manifest缓存清单" class="headerlink" title="manifest缓存清单"></a>manifest缓存清单</h4><p>就像写作文一样, manifest采用经典的三段式. 分别为: CACHE, NETWORK 和 FALLBACK. 如下, 先看一个栗子🌰:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">CACHE MANIFEST</div><div class="line">#v1.0.0</div><div class="line">content.css</div><div class="line"></div><div class="line">NETWORK:</div><div class="line">app.js</div><div class="line"></div><div class="line">FALLBACK:</div><div class="line">/other 404.html</div></pre></td></tr></table></figure>
+<p>其中第一行必须以 CACHE MANIFEST 开头, 后可跟若干字符注释, 注释从#号开始. 跟在 CACHE MANIFEST 行后的文件, 每行列出一个, 这些文件是需要缓存的文件. 因此 content.css 会被缓存, 不需要访问网络.</p>
+<p>第二段内容以 NETWORK: 开始, 跟在该行后的文件表示需要访问网络. 如: app.js 将直接从网络上下载, 并不走manifest cache, 如果除了第一段中缓存的文件以外, 其他文件都从网络上获取, 那么此时可将 app.js 改为 * (通配符).</p>
+<p>第三段内容以 FALLBACK: 开始, 跟在该行后的文件表示会有一个替代方案. 如: 当访问 /other 路径时, 如果访问失败, 那么将自动加载 404.html 作为替代.</p>
+<h4 id="manifest缓存状态"><a href="#manifest缓存状态" class="headerlink" title="manifest缓存状态"></a>manifest缓存状态</h4><p>每个manifest缓存都有一个状态, 标示着缓存的情况. 一份缓存清单只有一个缓存状态, 即使它被多个页面引用. 以下是各个缓存状态:</p>
+<ul>
+<li>UNCACHED(未缓存): 表明应用缓存对象还没有初始化完成.</li>
+<li>IDLE(空闲): 应用缓存并未处于更新状态.</li>
+<li>CHECKING(检查): 正在检查是否存在更新.</li>
+<li>DOWNLOADING(下载): 清单更新后, 重新下载全部资源到临时缓存中.</li>
+<li>UPDATEREADY(更新就绪): 新版本的缓存下载完成, 全部就绪, 随即触发事件 updateready.</li>
+<li>OBSOLETE(废弃): 应用缓存已被废弃.</li>
+<li>上述缓存状态常量依次取值0, 1, 2, 3, 4, 5.</li>
+</ul>
+<h4 id="applicationCache"><a href="#applicationCache" class="headerlink" title="applicationCache"></a>applicationCache</h4><p>applicationCache是操作应用缓存的瑞士军刀, 也是唯一的一把刀.</p>
+<p>首先我们来获取该对象.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">//webview下</div><div class="line">var cache = window.applicationCache;</div><div class="line">//shared worker中</div><div class="line">var cache = self.applicationCache;</div></pre></td></tr></table></figure>
+<p>以下是其属性和方法介绍(大神请绕过):</p>
+<ul>
+<li>status: 返回当前页面的应用缓存的状态, 通常开启应用缓存的页面可能返回1, 其他页面则返回0.</li>
+<li>update(): 手动触发应用缓存的更新.</li>
+</ul>
+<p>(1) 若有更新, 则依次触发①检查事件(Checking event), ②下载事件(Downloading event), ③下载进度事件(Progress event), ④更新完成事件(UpdateReady event);</p>
+<p>(2) 若无更新, 则依次触发①检查事件(Checking event), ②无更新事件(NoUpdate event);</p>
+<p>(3) 在未开启应用缓存的页面调用将抛出Uncaught DOMException 错误.</p>
+<p>update() 方法通常在长时间不关闭的页面使用, 比如说邮箱应用, 用于定期检测可能的更新.</p>
+<ul>
+<li>abort(): 取消应用缓存的更新. 可用于节省有限的网络带宽.</li>
+<li>swapCache(): 如果存在一个更新版本的应用缓存, 那么它将切换过去, 否则将抛出 Uncaught DOMException 错误. 通常, 我们会在updateready事件触发之后手动调用swapCache()方法, swapCache的切换只对后续加载的缓存文件有效, 已经加载成功的资源并不会重新加载.</li>
+</ul>
+<p>那么如何利用好上述api更新一个页面的应用缓存呢? 别急, Beginner’s Guide to Using the Application Cache 一文中提供了如下的样板方法:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">// Check if a new cache is available on page load.</div><div class="line">window.addEventListener(&apos;load&apos;, function(e) &#123;</div><div class="line">  window.applicationCache.addEventListener(&apos;updateready&apos;, function(e) &#123;</div><div class="line">    if (window.applicationCache.status == window.applicationCache.UPDATEREADY) &#123;</div><div class="line">      // Browser downloaded a new app cache.</div><div class="line">      // Swap it in and reload the page to get the new hotness.</div><div class="line">      window.applicationCache.swapCache();</div><div class="line">      if (confirm(&apos;A new version of this site is available. Load it?&apos;)) &#123;</div><div class="line">        window.location.reload();</div><div class="line">      &#125;</div><div class="line">    &#125; else &#123;</div><div class="line">      // Manifest didn&apos;t changed. Nothing new to server.</div><div class="line">    &#125;</div><div class="line">  &#125;, false);</div><div class="line">&#125;, false);</div></pre></td></tr></table></figure>
+<h4 id="manifest缓存独立性"><a href="#manifest缓存独立性" class="headerlink" title="manifest缓存独立性"></a>manifest缓存独立性</h4><p>1.manifest的缓存和浏览器默认的缓存是两套机制, 相互独立, 并且不受浏览器缓存大小限制(Chrome下测试结果).</p>
+<p>2.各个manifest文件的缓存相互独立, 各自在独立的区域进行缓存. 即使是缓存同一个文件, 也可能由于缓存的版本不一致, 而造成各个页面资源不一致.</p>
+<h4 id="manifest缓存规则"><a href="#manifest缓存规则" class="headerlink" title="manifest缓存规则"></a>manifest缓存规则</h4><p>1.遵循全量缓存的规律. 即: manifest文件改动后, 将重新缓存一遍所有的文件(包括html本身和动态添加的需要缓存的文件,即使缓存列表中没有该html). 第一次缓存过程中如果出现缓存失败的文件, 那么, 第二访问, 又将重新缓存一遍所有的文件. 以此类推.</p>
+<p>2.manifest文件本身不能写进缓存清单, 否则连同html和资源在其缓存失效之前, 将永远不能获得更新.</p>
+<p>3.即使manifest文件丢失, 缓存依然有效. 不过从此以后, 引入该manifest的html, 将永远不能获得更新.</p>
+<h4 id="webview的缓存现象"><a href="#webview的缓存现象" class="headerlink" title="webview的缓存现象"></a>webview的缓存现象</h4><p>通常, webview的缓存有如下三种现象:</p>
+<p>1.普通网页(无manifest文件), 不受manifest缓存影响, 缓存只走 http cache.</p>
+<p>2.包含manifest文件的网页, 缓存文件只受manifest缓存影响(只有manifest文件改变时才会更新缓存资源), 缓存资源完全与 http cache 无关, 但是 NETWORK 段落后需要访问网络的文件, 将继续走 http cache.</p>
+<p>3.webview直接加载manifest缓存过的文件时, 优先加载第一个manifest缓存的该文件, 如果没有找到manifest缓存, 那么它将自动寻找 http cache 或者 在线加载.</p>
+<h4 id="最佳实践"><a href="#最佳实践" class="headerlink" title="最佳实践"></a>最佳实践</h4><p>1.通常只使用一个manifest文件, 并保证缓存的文件尽可能的少, 以减小manifest每次更新清单中文件所耗费的时间和流量.</p>
+<p>2.如果一定要使用两个及以上manifest文件, 缓存文件请尽量不要相同.</p>
+<p>3.如果以上两条都不能保证, 那么, 请保证尽可能在manifest缓存的状态更新时, 主动去刷新网页.(此时并不能保证不同网页之间同一个缓存文件版本一致)</p>
+<h4 id="具体落地步骤"><a href="#具体落地步骤" class="headerlink" title="具体落地步骤"></a>具体落地步骤</h4><p>1.如果缓存的文件需要加参数运行, 建议将参数内容加到hash中, 如:cached-page.html#parameterName=value</p>
+<p>2.manifest 的引入可以使用绝对路径或者相对路径, 如果你使用的是绝对路径, 那么你的manifest文件必须和你的站点处于同一个域名下.</p>
+<p>3.manifest文件你可以保存为任意的扩展名, 但是响应头中以下字段须取以下定值, 以保证manifest文件正确被解析, 并且它没有http缓存.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Content-Type: text/cache-manifest</div><div class="line">Cache-Control: max-age=0</div><div class="line">Expires: [CURRENT TIME]</div></pre></td></tr></table></figure>
+<h4 id="如何更新缓存"><a href="#如何更新缓存" class="headerlink" title="如何更新缓存"></a>如何更新缓存</h4><p>1.更新manifest文件后, webview将自动更新缓存.</p>
+<p>2.js更新缓存(手动触发manifest更新): window.applicationCache.update();</p>
+
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
