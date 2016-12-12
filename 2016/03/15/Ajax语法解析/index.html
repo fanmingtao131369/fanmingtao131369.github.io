@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    
+
+    <title>
+      Ajax语法解析 | 大民 
+    </title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+      <meta name="author" content="范明涛">
+    
+    
+
+    <meta name="description" content="Ajax语法解析Ajax是目前很普遍的一门技术，也是很值得探讨和研究的一门技术。本文将针对Ajax的发展过程并结合其在不同库框架中的使用方式来和大家分享下Ajax的那些新老语法。
+Ajax简介Ajax全称为“Asynchronous Javascript And XML”，即“异步javascript和XML”的意思。通过Ajax我们可以向服务器发送请求，在不阻塞页面的情况下进行数据交互，也可以理">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Ajax语法解析 | 大民">
+<meta property="og:url" content="http://yoursite.com/2016/03/15/Ajax语法解析/index.html">
+<meta property="og:site_name" content="大民">
+<meta property="og:description" content="Ajax语法解析Ajax是目前很普遍的一门技术，也是很值得探讨和研究的一门技术。本文将针对Ajax的发展过程并结合其在不同库框架中的使用方式来和大家分享下Ajax的那些新老语法。
+Ajax简介Ajax全称为“Asynchronous Javascript And XML”，即“异步javascript和XML”的意思。通过Ajax我们可以向服务器发送请求，在不阻塞页面的情况下进行数据交互，也可以理">
+<meta property="og:updated_time" content="2016-12-12T09:13:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Ajax语法解析 | 大民">
+<meta name="twitter:description" content="Ajax语法解析Ajax是目前很普遍的一门技术，也是很值得探讨和研究的一门技术。本文将针对Ajax的发展过程并结合其在不同库框架中的使用方式来和大家分享下Ajax的那些新老语法。
+Ajax简介Ajax全称为“Asynchronous Javascript And XML”，即“异步javascript和XML”的意思。通过Ajax我们可以向服务器发送请求，在不阻塞页面的情况下进行数据交互，也可以理">
+    
+    
+    
+      <link rel="icon" type="image/x-icon" href="/favicon.png">
+    
+    <link rel="stylesheet" href="/css/uno.css">
+    <link rel="stylesheet" href="/css/highlight.css">
+    <link rel="stylesheet" href="/css/archive.css">
+    <link rel="stylesheet" href="/css/china-social-icon.css">
+
+</head>
+<body>
+
+    <span class="mobile btn-mobile-menu">
+        <i class="icon icon-list btn-mobile-menu__icon"></i>
+        <i class="icon icon-x-circle btn-mobile-close__icon hidden"></i>
+    </span>
+
+    
+
+<header class="panel-cover panel-cover--collapsed">
+
+
+  <div class="panel-main">
+
+  
+    <div class="panel-main__inner panel-inverted">
+    <div class="panel-main__content">
+
+        
+
+        <h1 class="panel-cover__title panel-title"><a href="/" title="link to homepage">大民</a></h1>
+        <hr class="panel-cover__divider" />
+
+        
+
+        <div class="navigation-wrapper">
+
+          <nav class="cover-navigation cover-navigation--primary">
+            <ul class="navigation">
+
+              
+                
+                <li class="navigation__item"><a href="/#blog" title="" class="blog-button">首页</a></li>
+              
+                
+                <li class="navigation__item"><a href="/about" title="" class="">关于</a></li>
+              
+                
+                <li class="navigation__item"><a href="/archive" title="" class="">归档</a></li>
+              
+
+            </ul>
+          </nav>
+
+          <!-- ----------------------------
+To add a new social icon simply duplicate one of the list items from below
+and change the class in the <i> tag to match the desired social network
+and then add your link to the <a>. Here is a full list of social network
+classes that you can use:
+
+    icon-social-500px
+    icon-social-behance
+    icon-social-delicious
+    icon-social-designer-news
+    icon-social-deviant-art
+    icon-social-digg
+    icon-social-dribbble
+    icon-social-facebook
+    icon-social-flickr
+    icon-social-forrst
+    icon-social-foursquare
+    icon-social-github
+    icon-social-google-plus
+    icon-social-hi5
+    icon-social-instagram
+    icon-social-lastfm
+    icon-social-linkedin
+    icon-social-medium
+    icon-social-myspace
+    icon-social-path
+    icon-social-pinterest
+    icon-social-rdio
+    icon-social-reddit
+    icon-social-skype
+    icon-social-spotify
+    icon-social-stack-overflow
+    icon-social-steam
+    icon-social-stumbleupon
+    icon-social-treehouse
+    icon-social-tumblr
+    icon-social-twitter
+    icon-social-vimeo
+    icon-social-xbox
+    icon-social-yelp
+    icon-social-youtube
+    icon-social-zerply
+    icon-mail
+
+-------------------------------->
+
+<!-- add social info here -->
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="panel-cover--overlay"></div>
+  </div>
+</header>
+
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner entry">
+            
+
+<article class="post-container post-container--single">
+
+  <header class="post-header">
+    
+    <h1 class="post-title">Ajax语法解析</h1>
+
+    
+
+    <div class="post-meta">
+      <time datetime="2016-03-15" class="post-meta__date date">2016-03-15</time> 
+
+      <span class="post-meta__tags tags">
+
+          
+
+          
+
+      </span>
+    </div>
+    
+    
+
+  </header>
+
+  <section id="post-content" class="article-content post">
+    <h3 id="Ajax语法解析"><a href="#Ajax语法解析" class="headerlink" title="Ajax语法解析"></a>Ajax语法解析</h3><p>Ajax是目前很普遍的一门技术，也是很值得探讨和研究的一门技术。本文将针对Ajax的发展过程并结合其在不同库框架中的使用方式来和大家分享下Ajax的那些新老语法。</p>
+<h4 id="Ajax简介"><a href="#Ajax简介" class="headerlink" title="Ajax简介"></a>Ajax简介</h4><p>Ajax全称为“Asynchronous Javascript And XML”，即“异步javascript和XML”的意思。通过Ajax我们可以向服务器发送请求，在不阻塞页面的情况下进行数据交互，也可以理解为异步数据传输。在Ajax的帮助下我们的网页只需局部刷新即可更新数据的显示，减少了不少必要的数据量，大大提高了用户体验，缩短了用户等待的时间，使得web应用程序更小、更快、更友好。</p>
+<h4 id="原生Ajax"><a href="#原生Ajax" class="headerlink" title="原生Ajax"></a>原生Ajax</h4><p>基本上现在的所有浏览器都支持原生Ajax的功能，下面就详细介绍利用原生js我们怎样来发起和处理Ajax请求。</p>
+<p><code>1.获取XMLHttpRequest对象</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var xhr =new XMLHttpRequest();//获取浏览器内置的XMLHttpRequest对象</div></pre></td></tr></table></figure>
+<p>如果你的项目应用不考虑低版本IE，那么可以直接用上面的方法，所有现代浏览器 (Firefox、Chrome、Safari 以及 Opera) 都内建了 XMLHttpRequest 对象。如果需要兼容老版本IE（IE5、IE6），那么可以使用 ActiveX 对象:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">var xhr;</div><div class="line">if (window.XMLHttpRequest) &#123;</div><div class="line">xhr=new XMLHttpRequest();</div><div class="line">&#125; else if (window.ActiveXObject) &#123; // 兼容老版本浏览器</div><div class="line">xhr=new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><code>2.参数配置</code></p>
+<p>有了XMLHttpRequest对象，我们还需要配置一些请求的参数信息来完成数据交互，利用open方法即可:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">var xhr;</div><div class="line">if(window.XMLHttpRequest)&#123;</div><div class="line">    xhr=new XMLHttpRequest();</div><div class="line">&#125;else if(window.ActiveXObject)&#123;</div><div class="line">    xhr=new ActiveXObject(&quot;Microsoft&quot;)</div><div class="line">&#125;</div><div class="line">if(xhr)&#123;</div><div class="line">    xhr.open(&apos;GET&apos;,&apos;/TEST/&apos;,true);//以GET请求的方式向&apos;/test/&apos;路径发送异步请求</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>open方法为我们创建了一个新的http请求，其中第一个参数为请求方式，一般为’GET’或’POST’;第二个参数为请求URL;第三个参数为是否异步，默认为true。</p>
+<p><code>发送请求</code></p>
+<p>配置完了基本参数信息，我们直接调用send方法发送请求，代码如下:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">var xhr;</div><div class="line">if(window.XMLHttpRequest)&#123;</div><div class="line">    xhr=new XMLHttpRequest();</div><div class="line">&#125;else if(window.ActiveXObject)&#123;</div><div class="line">    xhr = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);</div><div class="line">&#125;</div><div class="line">if(xhr)&#123;</div><div class="line">    xhr.open(&apos;GET&apos;,&apos;&apos;/test/&apos;,true);//以GET请求的方式向&apos;/test/&apos;路径发送异步请求</div><div class="line">    xhr.send();//调用send方法发送请求</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>你需要注意的是如果使用GET方法传递参数，我们可以直接将参数放在URL后面，比如’/test/?username=fl&amp;pwd=666’;如果使用POST方法，那么我们的参数需要写在send方法里</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">xhr.open(&apos;POST&apos;,&apos;/test/&apos;,true);</div><div class="line">xhr.setRequestHeader(&quot;Content-type&quot;,&quot;application/x-www-form-urlencoded&quot;);//将请求头设置为表单方式提交</div><div class="line">xhr.send(&apos;username=fl&amp;pwd=666&apos;);</div></pre></td></tr></table></figure>
+<p>最终会以Form Data的形式传递,因此我们要修改成我们期望的数据格式JSON格式。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">xhr.open(&apos;POST&apos;,&apos;/test/&apos;,true);</div><div class="line">xhr.send(JSON.stringify(&#123;username:&apos;fl&apos;,pwd:666&#125;));</div></pre></td></tr></table></figure>
+<p><code>监测状态</code></p>
+<p>发送完Ajax请求之后，我们需要针对服务器返回的状态进行监测并进行相应的处理，这里我们需要使用onreadystatechange方法。<br>代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">var xhr;</div><div class="line">if(window.XMLHttpRequest)&#123;</div><div class="line">    xhr=new XMLHttpRequest();</div><div class="line">&#125;else if(window.ActiveXObject)&#123;</div><div class="line">    xhr = new ActiveXObject(&apos;Microsoft.XMLHTTP&apos;);</div><div class="line">&#125;</div><div class="line">if(xhr)&#123;</div><div class="line">    xhr.open(&apos;GET&apos;,&apos;/test/&apos;,true);//以get请求的方式向&apos;/test/&apos;路径发送异步请求</div><div class="line">    xhr.send();</div><div class="line">    xhr.onreadystatechange = function()&#123;//利用onreadystatechange检测状态</div><div class="line">        if(xhr.readyState ==4)&#123;//readyState为4表示请求响应完成</div><div class="line">            if(xhr.status ===200)&#123;//status为200表示请求成功</div><div class="line">                console.log(&apos;执行成功&apos;);</div><div class="line">            &#125;else&#123;</div><div class="line">                console.log(&apos;执行出错&apos;);</div><div class="line">            &#125;</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>上面我们利用onreadystatechange监测状态，并在内部利用readyState获取当前的状态。readyState一共有5个阶段，当其为4时表示响应内容解析完成，可以在客户端调用了。当readyState为4时，我们又通过status来获取状态码，状态码为200时执行成功代码，否则执行出错代码。</p>
+<p>当然我们可以用onload来代替onreadystatechange等于4的情况，因为onload只在状态为4的时候才被调用，代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">xhr.onload = function () &#123;    // 调用onload           if (xhr.status === 200) &#123;    // status为200表示请求成功</div><div class="line">    &#125;</div><div class="line">        console.log(&apos;执行成功&apos;);</div><div class="line">    &#125; else &#123;</div><div class="line">    console.log(&apos;执行出错&apos;);</div><div class="line">    &#125;   </div><div class="line">&#125;</div></pre></td></tr></table></figure>
+  </section>
+
+  
+  
+</article>
+
+
+            <footer class="footer">
+
+    <span class="footer__copyright">&copy; 2014-2015. | 由<a href="https://hexo.io/">Hexo</a>强力驱动 | 主题<a href="https://github.com/someus/huno">Huno</a></span>
+    
+</footer>
+        </div>
+    </div>
+
+    <!-- js files -->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/scale.fix.js"></script>
+    
+
+    
+
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript"> 
+        $(document).ready(function(){
+            MathJax.Hub.Config({ 
+                tex2jax: {inlineMath: [['[latex]','[/latex]'], ['\\(','\\)']]} 
+            });
+        });
+    </script>
+
+
+    
+
+    <script src="/js/awesome-toc.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.awesome_toc({
+                overlay: true,
+                contentId: "post-content",
+            });
+        });
+    </script>
+
+
+    
+    
+    <!--kill ie6 -->
+<!--[if IE 6]>
+  <script src="//letskillie6.googlecode.com/svn/trunk/2/zh_CN.js"></script>
+<![endif]-->
+
+</body>
+</html>
